@@ -8,6 +8,12 @@
 //FUNCTION: the function will need ti get the HTMl src from each image aand chnage it to the more inflated image
 //ALERT: when a unicorn is fully inflated we need to trigger an alert to thaank the user
 
+//ARRAY
+let unicorns = document.getElementsByClassName('inflate-an-image')
+console.log(unicorns)
+
+//
+
 function inflateTheUnicorn() {
   console.log('hello')
 }
