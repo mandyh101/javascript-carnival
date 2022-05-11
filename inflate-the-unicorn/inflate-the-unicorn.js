@@ -14,7 +14,7 @@ console.log(unicorns)
 
 //LOGIC
 for (i = 0; i < unicorns.length; i++) {
-  unicorns[i].onclick = inflateTheUnicorn()
+  unicorns[i].onclick = inflateTheUnicorn
 }
 
 function inflateTheUnicorn() {
