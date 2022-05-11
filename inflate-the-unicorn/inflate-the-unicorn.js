@@ -12,9 +12,11 @@
 let unicorns = document.getElementsByClassName('inflate-an-image')
 console.log(unicorns)
 
-//
+//LOGIC
+for (i = 0; i < unicorns.length; i++) {
+  unicorns[i].onclick = inflateTheUnicorn()
+}
 
 function inflateTheUnicorn() {
   console.log('hello')
 }
-inflateTheUnicorn()
