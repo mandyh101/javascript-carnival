@@ -17,6 +17,8 @@ for (i = 0; i < unicorns.length; i++) {
   unicorns[i].onclick = inflateTheUnicorn
 }
 
+let unicornIsInflated = false //i'm going to create a bool variable here as a default variaable that I might need to caall on later
+
 function inflateTheUnicorn() {
   //we need to write a function that will change the img of the unicorn on each click
   //there are three images to change between in order
