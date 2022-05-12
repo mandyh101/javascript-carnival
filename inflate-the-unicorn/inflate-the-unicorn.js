@@ -25,8 +25,13 @@ function inflateTheUnicorn(e) {
   //when the third image is called, an alert must trigger saying thank you.
   //The first step is to get the function to change any clicked image src to unicorn-1.png
   let unicorn = e.target //here I have created a vaariable for the specific clicked target
-  if (unicorn.innerHTML.scr == './images/unicorn-0.png') {
-    //if the image clicked has the source, image 1
-    console.log('You clicked the imaage to inflate it')
+  switch (unicorn) {
+    case document.getElementsByClassName('inflate-an-image').src ==
+      './images/unicorn-0.png':
+      console.log('click')
   }
+  // if (unicorn.src === './images/unicorn-0.png') {
+  //   //if the image clicked has the source, image 1
+  //   console.log('This is unicorn 0')
+  // }
 }
