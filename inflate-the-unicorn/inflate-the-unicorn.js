@@ -35,22 +35,22 @@ function inflateTheUnicorn(e) {
   //I need a variable to assign the split link
   // I need a variable to assign the sliced letter array to
   //And then I can use this to change the HTML link in my function
-
-  if (unicorn.src.slice(-5) === '0') {
+  if (unicorn.src.slice(-5) == '0') {
     console.log(unicorn.src)
-    // } else if (
-    //   unicorn.src ===
-    //   'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-1.png'
-    // ) {
-    //   unicorn.src =
-    //     'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-2.png'
-    // } else if (
-    //   unicorn.src ===
-    //   'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-2.png'
-    // ) {
-    //   unicorn.src =
-    //     'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-3.png'
-    // } else {
-    // alert(`Unicorn number ${id} says thank you!`)
   }
+  // } else if (
+  //   unicorn.src ===
+  //   'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-1.png'
+  // ) {
+  //   unicorn.src =
+  //     'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-2.png'
+  // } else if (
+  //   unicorn.src ===
+  //   'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-2.png'
+  // ) {
+  //   unicorn.src =
+  //     'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-3.png'
+  // } else {
+  //   // alert(`Unicorn number ${id} says thank you!`)
+  // }
 }
