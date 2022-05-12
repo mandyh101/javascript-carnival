@@ -19,9 +19,14 @@ for (i = 0; i < unicorns.length; i++) {
 
 let unicornIsInflated = false //i'm going to create a bool variable here as a default variaable that I might need to caall on later
 
-function inflateTheUnicorn() {
+function inflateTheUnicorn(e) {
   //we need to write a function that will change the img of the unicorn on each click
   //there are three images to change between in order
   //when the third image is called, an alert must trigger saying thank you.
   //The first step is to get the function to change any clicked image src to unicorn-1.png
+  let unicorn = e.target //here I have created a vaariable for the specific clicked target
+  if (unicorn.innerHTML.scr == './images/unicorn-0.png') {
+    //if the image clicked has the source, image 1
+    console.log('You clicked the imaage to inflate it')
+  }
 }
