@@ -19,7 +19,7 @@ for (i = 0; i < unicorns.length; i++) {
 function inflateTheUnicorn(e) {
   let unicorn = e.target //here I have created a vaariable for the specific clicked target
 
-  let id = unicorn.id[3] //I got this code from Josephs video. it solved my issue of trying to return the number of the inflated unicorn image in my alert. I created an ID for each unicorn image. This code creates a variable that is the 3rd leter of the elements ID. In this case, the number in the ID I gave these imgs.
+  let id = unicorn.id[3] //I got this code from Josephs video. it solved my issue of trying to return the number of the inflated unicorn image in my alert. I had created an ID for each unicorn image. This code creates a variable that is the 3rd leter of the elements ID. In this case, the number in the ID I gave these imgs. I can then call this id in my alert function
   // console.log(id)
 
   //okay, I thought I had my if/else statement nailed but then I couldn't get the URLs to work.
@@ -38,4 +38,4 @@ function inflateTheUnicorn(e) {
     alert(`Unicorn number ${id} says thank you!`)
   }
 }
-//stretch - change to switch
+//stretch - change the above if/else condition to switch
