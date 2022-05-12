@@ -10,48 +10,32 @@
 
 //ARRAY
 let unicorns = document.getElementsByClassName('inflate-an-image')
-console.log(unicorns)
 
 // //LOGIC
 for (i = 0; i < unicorns.length; i++) {
   unicorns[i].onclick = inflateTheUnicorn
 }
 
-let unicornIsInflated = false //i'm going to create a bool variable here as a default variaable that I might need to caall on later
-
 function inflateTheUnicorn(e) {
-  //we need to write a function that will change the img of the unicorn on each click
-  //there are three images to change between in order
-  //when we reach the image with a fully inflated horn an alert must trigger saying thank you.
-  //we need to be able to see what unicorn image we're clicking on
-  //The first step is to get the function to change any clicked image src to unicorn-1.png
   let unicorn = e.target //here I have created a vaariable for the specific clicked target
-  console.log(unicorn)
-  console.log('this is the ' + unicorn.src)
+
   let id = unicorn.id[3] //I got this code from Josephs video. it solved my issue of trying to return the number of the inflated unicorn image in my alert. I created an ID for each unicorn image. This code creates a variable that is the 3rd leter of the elements ID. In this case, the number in the ID I gave these imgs.
-  console.log(id)
+  // console.log(id)
 
   //okay, I thought I had my if/else statement nailed but then I couldn't get the URLs to work.
-  //so I am going to try and use slice to take the 5th letter (the image number) to change the links and compare. I thought I needed to create an array of string out of the src first but one of my peers told me that wasn't necessary.
-  //I need a variable to assign the split link
-  // I need a variable to assign the sliced letter array to
-  //And then I can use this to change the HTML link in my function
-  if (unicorn.src.slice(-5) == '0.png') {
-     unicorn.src.slice(-5)++ 
+  //so I am going to use slice to take the 5th letter (the image number) from the source link.
+  // I need a variable to assign the sliced src value
+  //And then I can use this variable in my condition to iterate on each click and change the src link for the image.
+  const srcNumber = unicorn.src.slice(-5, -4) //I paired with David to work through slicing the src link.
+
+  if (srcNumber === '0') {
+    unicorn.src = './images/unicorn-1.png' // I had a bug because I was trying to make my code block increase the srcNum. Pairing with David we worked out that I could just write the image link here.
+  } else if (srcNumber === '1') {
+    unicorn.src = './images/unicorn-2.png'
+  } else if (srcNumber === '2') {
+    unicorn.src = './images/unicorn-3.png'
+  } else {
+    alert(`Unicorn number ${id} says thank you!`)
   }
-  // } else if (
-  //   unicorn.src ===
-  //   'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-1.png'
-  // ) {
-  //   unicorn.src =
-  //     'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-2.png'
-  // } else if (
-  //   unicorn.src ===
-  //   'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-2.png'
-  // ) {
-  //   unicorn.src =
-  //     'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-3.png'
-  // } else {
-  //   // alert(`Unicorn number ${id} says thank you!`)
-  // }
 }
+//stretch - change to switch
