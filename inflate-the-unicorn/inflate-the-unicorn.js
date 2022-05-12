@@ -31,8 +31,13 @@ function inflateTheUnicorn(e) {
     unicorn.src ===
     'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-0.png'
   ) {
-    //if the image clicked has the source, image 1
     unicorn.src =
       'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-1.png'
+  } else if (
+    unicorn.src ===
+    'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-1.png'
+  ) {
+    unicorn.src =
+      'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-2.png'
   }
 }
