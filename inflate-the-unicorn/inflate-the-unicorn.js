@@ -9,24 +9,25 @@
 //ALERT: when a unicorn is fully inflated we need to trigger an alert to thaank the user
 
 //ARRAY
-// let unicorns = document.getElementsByClassName('inflate-an-image')
-// console.log(unicorns)
-let unicorns = []
-unicorns.push(
-  {
-    Element: document.getElementById('uni1'),
-    name: 'Harry the unicorn',
-  },
-  {
-    Element: document.getElementById('uni2'),
-    name: 'Jenny the unicorn',
-  },
-  {
-    Element: document.getElementById('uni3'),
-    name: 'Sparkle the unicorn',
-  }
-)
+let unicorns = document.getElementsByClassName('inflate-an-image')
 console.log(unicorns)
+//I tried to create an object but I got really lost and went back to my array.
+// let unicorns = []
+// unicorns.push(
+//   {
+//     Element: document.getElementById('uni1'),
+//     name: 'Harry the unicorn',
+//   },
+//   {
+//     Element: document.getElementById('uni2'),
+//     name: 'Jenny the unicorn',
+//   },
+//   {
+//     Element: document.getElementById('uni3'),
+//     name: 'Sparkle the unicorn',
+//   }
+// )
+// console.log(unicorns)
 //LOGIC
 for (i = 0; i < unicorns.length; i++) {
   unicorns[i].onclick = inflateTheUnicorn
@@ -37,7 +38,10 @@ let unicornIsInflated = false //i'm going to create a bool variable here as a de
 function inflateTheUnicorn(e) {
   //we need to write a function that will change the img of the unicorn on each click
   //there are three images to change between in order
-  //when the third image is called, an alert must trigger saying thank you.
+  //we need to be able to see what unicorn image we're clicking on
+  //we need to be able to track the inflation level
+  //when we reach the image with a fully inflated horn an alert must trigger saying thank you.
+
   //The first step is to get the function to change any clicked image src to unicorn-1.png
   let unicorn = e.target //here I have created a vaariable for the specific clicked target
   console.log('this is the ' + unicorn.src)
@@ -61,6 +65,6 @@ function inflateTheUnicorn(e) {
     unicorn.src =
       'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-3.png'
   } else {
-    console.log(unicorn)
+    console.log(unicorn.name + 'says thank you!')
   }
 }
