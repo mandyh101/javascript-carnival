@@ -25,13 +25,14 @@ function inflateTheUnicorn(e) {
   //when the third image is called, an alert must trigger saying thank you.
   //The first step is to get the function to change any clicked image src to unicorn-1.png
   let unicorn = e.target //here I have created a vaariable for the specific clicked target
-  switch (unicorn) {
-    case document.getElementsByClassName('inflate-an-image').src ==
-      './images/unicorn-0.png':
-      console.log('click')
+  console.log('this is the ' + unicorn.src)
+
+  if (
+    unicorn.src ===
+    'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-0.png'
+  ) {
+    //if the image clicked has the source, image 1
+    unicorn.src =
+      'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-1.png'
   }
-  // if (unicorn.src === './images/unicorn-0.png') {
-  //   //if the image clicked has the source, image 1
-  //   console.log('This is unicorn 0')
-  // }
 }
