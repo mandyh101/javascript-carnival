@@ -12,23 +12,23 @@
 let unicorns = document.getElementsByClassName('inflate-an-image')
 console.log(unicorns)
 //I tried to create an object but I got really lost and went back to my array.
-// let unicorns = []
-// unicorns.push(
-//   {
-//     Element: document.getElementById('uni1'),
-//     name: 'Harry the unicorn',
-//   },
-//   {
-//     Element: document.getElementById('uni2'),
-//     name: 'Jenny the unicorn',
-//   },
-//   {
-//     Element: document.getElementById('uni3'),
-//     name: 'Sparkle the unicorn',
-//   }
-// )
-// console.log(unicorns)
-//LOGIC
+//     let unicorns = []
+//     unicorns.push(
+//       {
+//         Element: document.getElementById('uni1'),
+//         name: 'Harry the unicorn',
+//       },
+//       {
+//         Element: document.getElementById('uni2'),
+//         name: 'Jenny the unicorn',
+//       },
+//       {
+//         Element: document.getElementById('uni3'),
+//         name: 'Sparkle the unicorn',
+//       }
+//     )
+//     console.log(unicorns)
+// //LOGIC
 for (i = 0; i < unicorns.length; i++) {
   unicorns[i].onclick = inflateTheUnicorn
 }
@@ -45,7 +45,8 @@ function inflateTheUnicorn(e) {
   //The first step is to get the function to change any clicked image src to unicorn-1.png
   let unicorn = e.target //here I have created a vaariable for the specific clicked target
   console.log('this is the ' + unicorn.src)
-
+  let id = unicorn.id[3]
+  console.log(id)
   if (
     unicorn.src ===
     'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-0.png'
@@ -65,6 +66,6 @@ function inflateTheUnicorn(e) {
     unicorn.src =
       'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-3.png'
   } else {
-    console.log(unicorn.name + 'says thank you!')
+    alert(`Unicorn number ${id} says thank you!`)
   }
 }
