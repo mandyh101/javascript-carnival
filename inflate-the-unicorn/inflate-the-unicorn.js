@@ -11,23 +11,7 @@
 //ARRAY
 let unicorns = document.getElementsByClassName('inflate-an-image')
 console.log(unicorns)
-//I tried to create an object but I got really lost and went back to my array.
-//     let unicorns = []
-//     unicorns.push(
-//       {
-//         Element: document.getElementById('uni1'),
-//         name: 'Harry the unicorn',
-//       },
-//       {
-//         Element: document.getElementById('uni2'),
-//         name: 'Jenny the unicorn',
-//       },
-//       {
-//         Element: document.getElementById('uni3'),
-//         name: 'Sparkle the unicorn',
-//       }
-//     )
-//     console.log(unicorns)
+
 // //LOGIC
 for (i = 0; i < unicorns.length; i++) {
   unicorns[i].onclick = inflateTheUnicorn
