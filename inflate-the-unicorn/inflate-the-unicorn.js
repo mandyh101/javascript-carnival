@@ -9,9 +9,27 @@
 //ALERT: when a unicorn is fully inflated we need to trigger an alert to thaank the user
 
 //ARRAY
-let unicorns = document.getElementsByClassName('inflate-an-image')
+// let unicorns = document.getElementsByClassName('inflate-an-image')
+// console.log(unicorns)
+let unicorns = []
+unicorns.push(
+  {
+    Element: document.getElementById('uni1'),
+    name: 'Harry the unicorn',
+    inflationStatus: inflationLevel,
+  },
+  {
+    Element: document.getElementById('uni2'),
+    name: 'Jenny the unicorn',
+    inflationStatus: inflationLevel,
+  },
+  {
+    Element: document.getElementById('uni3'),
+    name: 'Sparkle the unicorn',
+    inflationStatus: inflationLevel,
+  }
+)
 console.log(unicorns)
-
 //LOGIC
 for (i = 0; i < unicorns.length; i++) {
   unicorns[i].onclick = inflateTheUnicorn
@@ -45,5 +63,7 @@ function inflateTheUnicorn(e) {
   ) {
     unicorn.src =
       'file:///Users/mandyhale/devacademy/DA_projects/sprint-5-projects/javascript-carnival/inflate-the-unicorn/images/unicorn-3.png'
+  } else {
+    console.log(unicorn)
   }
 }
