@@ -16,17 +16,14 @@ unicorns.push(
   {
     Element: document.getElementById('uni1'),
     name: 'Harry the unicorn',
-    inflationStatus: inflationLevel,
   },
   {
     Element: document.getElementById('uni2'),
     name: 'Jenny the unicorn',
-    inflationStatus: inflationLevel,
   },
   {
     Element: document.getElementById('uni3'),
     name: 'Sparkle the unicorn',
-    inflationStatus: inflationLevel,
   }
 )
 console.log(unicorns)
