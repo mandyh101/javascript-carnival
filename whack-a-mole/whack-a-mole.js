@@ -21,16 +21,16 @@ console.log(randomCell)
 //First create HTML image using JS (adding this step based on demo video)
 //TRY a function that does something when a cells is clicked
 
-// var moleImg = document.createElement('img') //create the image
-// moleImg.src = './mole.PNG' //set the source
-// moleImg.alt = 'image of a mole' //set the alt text
-// randomCell.appendChild(moleImg) //get the element we want the image to appear in and appendchild = place the inside the parent element
-
+var moleImg = document.createElement('img') //create the image
+moleImg.src = './mole.PNG' //set the source
+moleImg.alt = 'image of a mole' //set the alt text
+randomCell.appendChild(moleImg) //get the element we want the image to appear in and appendchild = place the inside the parent element
+moleImg.id = 'mole' //link to style element to make moleimg same size as cells
 console.log(tableCells)
 
-document.getElementsByTagName('td').addEventListener('click', whackTheMole())
+// document.getElementsByTagName('td').addEventListener('click', whackTheMole())
 
-function whackTheMole(e) {
-  let clickedCell = e.target
-  console.log('Get that mole!')
-}
+// function whackTheMole(e) {
+//   let clickedCell = e.target
+//   console.log('Get that mole!')
+// }
