@@ -20,6 +20,7 @@ console.log(randomCell)
 //PART 3: A way to show the mole in a random cell when it is clicked
 //First create HTML image using JS (adding this step based on demo video)
 //THEN create a function that makes the mole change cells on click
+//BONUS - add the audio noise
 
 var moleImg = document.createElement('img') //create the image
 moleImg.src = './mole.PNG' //set the source
@@ -38,8 +39,3 @@ function whackTheMole() {
   randomCell.appendChild(moleImg) //we can use this code again to place the image element in its new parent element based on teh random cell value
   moleSoundEffect.play() //call sound effect
 }
-//BONUS - add the audio noise
-
-// let moleSoundEffect = new Audio()
-// moleSoundEffect.src = 'whack-audio.wav'
-// moleSoundEffect.play()
