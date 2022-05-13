@@ -18,13 +18,12 @@ var randomCell = tableCells[randomIndex] //this uses the randomIndex value as th
 console.log(randomCell)
 
 //PART 3: A way to show the mole in a random cell when it is clicked
-//TRY a function to insert an image into a cell on click
+//TRY a function that does something when a cells is clicked
 console.log(tableCells)
 
-document.getElementsByTagName('td').onclick = function () {
-  whackTheMole()
-}
+document.getElementsByTagName('td').addEventListener('click', whackTheMole())
 
-function whackTheMole() {
+function whackTheMole(e) {
+  let clickedCell = e.target
   console.log('Get that mole!')
 }
