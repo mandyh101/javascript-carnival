@@ -26,12 +26,20 @@ moleImg.src = './mole.PNG' //set the source
 moleImg.alt = 'image of a mole' //set the alt text
 randomCell.appendChild(moleImg) //get the element we want the image to appear in and appendchild = place the inside the parent element
 moleImg.id = 'mole' //link to style element to make moleimg same size as cells
-console.log(tableCells)
+let moleSoundEffect = new Audio() //used this resurce to add soundeffect https://www.developphp.com/lib/JavaScript/Audio
+moleSoundEffect.src = 'whack-audio.wav'
 
 moleImg.onclick = whackTheMole
 
 function whackTheMole() {
+  //had to use the vid for this part as my brain couldn't compute but now I see its so obvious!
   randomIndex = Math.floor(Math.random() * tableCells.length) //repeat the random index generator
   randomCell = tableCells[randomIndex] //reassign the new index number to select a new cell
   randomCell.appendChild(moleImg) //we can use this code again to place the image element in its new parent element based on teh random cell value
+  moleSoundEffect.play() //call sound effect
 }
+//BONUS - add the audio noise
+
+// let moleSoundEffect = new Audio()
+// moleSoundEffect.src = 'whack-audio.wav'
+// moleSoundEffect.play()
