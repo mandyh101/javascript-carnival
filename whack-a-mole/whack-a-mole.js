@@ -31,5 +31,7 @@ console.log(tableCells)
 moleImg.onclick = whackTheMole
 
 function whackTheMole() {
-  console.log('Get that mole!')
+  randomIndex = Math.floor(Math.random() * tableCells.length) //repeat the random index generator
+  randomCell = tableCells[randomIndex] //reassign the new index number to select a new cell
+  randomCell.appendChild(moleImg) //we can use this code again to place the image element in its new parent element based on teh random cell value
 }
