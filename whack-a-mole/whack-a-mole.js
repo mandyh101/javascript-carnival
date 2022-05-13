@@ -19,7 +19,7 @@ console.log(randomCell)
 
 //PART 3: A way to show the mole in a random cell when it is clicked
 //First create HTML image using JS (adding this step based on demo video)
-//TRY a function that does something when a cells is clicked
+//THEN create a function that makes the mole change cells on click
 
 var moleImg = document.createElement('img') //create the image
 moleImg.src = './mole.PNG' //set the source
@@ -28,9 +28,8 @@ randomCell.appendChild(moleImg) //get the element we want the image to appear in
 moleImg.id = 'mole' //link to style element to make moleimg same size as cells
 console.log(tableCells)
 
-// document.getElementsByTagName('td').addEventListener('click', whackTheMole())
+moleImg.onclick = whackTheMole
 
-// function whackTheMole(e) {
-//   let clickedCell = e.target
-//   console.log('Get that mole!')
-// }
+function whackTheMole() {
+  console.log('Get that mole!')
+}
