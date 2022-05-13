@@ -14,8 +14,7 @@ console.log(tableCells)
 var randomIndex = Math.floor(Math.random() * tableCells.length) //instead of times a number, times length of array and then the code won't break if table size changes
 //changed let to var as I was getting error: cannot re-declare block scoped variable.
 //Assign the cell element that matches the randomIndex value to a variable
-var randomCell = tableCells,
-  randomIndex
+var randomCell = tableCells[randomIndex] //this uses the randomIndex value as the [index selector] for our table cells array
 console.log(randomCell)
 
 //PART 3: A way to show the mole in a random cell when it is clicked
