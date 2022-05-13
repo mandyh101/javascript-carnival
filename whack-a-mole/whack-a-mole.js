@@ -10,10 +10,7 @@ let tableCells = document.getElementsByTagName('td')
 console.log(tableCells)
 
 //PART 2: Create a function to randomly select a cell
-
-function getRandomCell(min, max) {
-  console.log(Math.floor(Math.random() * (max - min + 1) + min)) //will change to return when working
-}
-getRandomCell(0, 10) //test arguments
+//Instead of a function will use the javascript random method to assign a random cell using it's index to a variable
+let randomCell = Math.floor(Math.random() * tableCells.length)
 
 //PART 3: A way to show the mole in a random cell when it is clicked
