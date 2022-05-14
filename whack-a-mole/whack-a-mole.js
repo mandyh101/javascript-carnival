@@ -21,7 +21,7 @@ moleImg.src = './mole.PNG' //set the source
 moleImg.alt = 'image of a mole' //set the alt text
 randomCell.appendChild(moleImg) //get the element we want the image to appear in and appendchild = place the inside the parent element
 moleImg.id = 'mole' //link to style element to make moleimg same size as cells
-
+//stretch idea - can I change the style without using an id?
 let moleSoundEffect = new Audio() //used this resurce to add soundeffect https://www.developphp.com/lib/JavaScript/Audio
 moleSoundEffect.src = 'whack-audio.wav'
 
