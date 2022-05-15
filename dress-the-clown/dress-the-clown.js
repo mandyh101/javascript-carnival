@@ -19,9 +19,10 @@
 //add a check to the function so that if the headIndex variable equals greater than 6 to staart back at 0
 
 let clownHead = document.getElementById('head')
-let headIndex = 0
+let headIndex = 0 //count the head image number
 
 function changeClownHead() {
+  DragEve
   clownHead.src = './images/head0.png'
   console.log(clownHead.src)
 }
