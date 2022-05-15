@@ -30,7 +30,7 @@ function changeClownHeadUp() {
 //changeClownHead()
 
 function changeClownHeadDown() {
-  headIndex > 5 ? headIndex-- : (headIndex = 0)
+  headIndex > 0 ? headIndex-- : (headIndex = 5)
   let headSrc = headSrcStr.concat(headIndex + '.png')
   clownHead.src = headSrc
 }
