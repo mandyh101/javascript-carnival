@@ -19,6 +19,8 @@
 //add a check to the function so that if the headIndex variable equals greater than 6 to staart back at 0
 
 let clownHead = document.getElementById('head')
+let clownBody = document.getElementById('body')
+let clownFeet = document.getElementById('feet')
 let headIndex = 0 //count the head image number
 let headSrcStr = './images/head'
 
