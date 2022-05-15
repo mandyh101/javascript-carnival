@@ -23,7 +23,7 @@ let headIndex = 0 //count the head image number
 let headSrcStr = './images/head'
 
 function changeClownHead() {
-  if (headIndex <= 6) {
+  if (headIndex < 6) {
     headIndex++
   } else {
     headIndex == 0
@@ -33,7 +33,16 @@ function changeClownHead() {
   console.log(clownHead.src)
   console.log(headIndex)
 }
-changeClownHead()
+//changeClownHead()
+
+window.addEventListener('keydown', toggleImages, false)
+
+function toggleImages(keyPressed) {
+  if (keyPressed.keyCode == 39) {
+    changeClownHead()
+    console.log('the arrow press calls the changeClownHead function')
+  }
+}
 //Toggle between different body parts
 //create anothe rindex to keep track of which body part you are selecting clothing for (array using get element)
 //Write  function that allows you to use the up and down arrows to increase/decrease the clothingindex variable
