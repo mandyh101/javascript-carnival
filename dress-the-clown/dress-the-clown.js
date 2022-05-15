@@ -23,6 +23,8 @@ let clownBody = document.getElementById('body')
 let clownFeet = document.getElementById('feet')
 let headIndex = 0 //count the head image number
 let headSrcStr = './images/head'
+let bodySrcStr = './images/body'
+let feetSrcStr = './images/shoes'
 
 function changeClownHeadUp() {
   headIndex < 5 ? headIndex++ : (headIndex = 0)
@@ -56,8 +58,14 @@ function toggleImages(keyPressed) {
 //add a check to make sure it doesn't go too high or low
 //console.log to test
 
-let bodyParts = document.getElementsByTagName('img')
-console.log(bodyParts)
+// let bodyParts = document.getElementsByTagName('img')
+// console.log(bodyParts)
+let bodyPartsIndex = 0 //comment out array and change to a variable holding the number
+
+function changeBodyParts() {
+  if (bodyPartsIndex == 0) {
+  }
+}
 
 //Refactor and change all body parts
 //use our head function
