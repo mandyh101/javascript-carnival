@@ -60,12 +60,21 @@ function toggleImages(keyPressed) {
 
 // let bodyParts = document.getElementsByTagName('img')
 // console.log(bodyParts)
-let bodyPartsIndex = 0 //comment out array and change to a variable holding the number
+let bodyPartsIndex = 2 //comment out array and change to a variable holding the number
 
 function changeBodyParts() {
   if (bodyPartsIndex == 0) {
+    bodyPart = document.getElementById('head')
+    console.log('You are changing the ' + bodyPart)
+  } else if (bodyPartsIndex == 1) {
+    bodyPart = document.getElementById('body')
+    console.log('You are changing the ' + bodyPart)
+  } else if (bodyPartsIndex == 2) {
+    bodyPart = document.getElementById('feet')
+    console.log(bodyPart)
   }
 }
+changeBodyParts()
 
 //Refactor and change all body parts
 //use our head function
