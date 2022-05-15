@@ -19,6 +19,7 @@
 //add a check to the function so that if the headIndex variable equals greater than 6 to staart back at 0
 
 let clownHead = document.getElementById('head')
+let headIndex = 0
 
 function changeClownHead() {
   clownHead.src = './images/head0.png'
