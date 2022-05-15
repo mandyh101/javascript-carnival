@@ -40,7 +40,12 @@ window.addEventListener('keydown', toggleImages, false)
 function toggleImages(keyPressed) {
   if (keyPressed.keyCode == 39) {
     changeClownHeadUp()
-    console.log('the arrow press calls the changeClownHead function')
+    console.log('right arrow = increase headIndex')
+    console.log(headIndex)
+  } else if (keyPressed.keyCode == 37) {
+    changeClownHeadDown()
+    console.log('left arrow = decrease headIndex')
+    console.log(headIndex)
   }
 }
 //Toggle between different body parts
