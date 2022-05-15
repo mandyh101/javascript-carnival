@@ -58,9 +58,7 @@ function toggleImages(keyPressed) {
 //add a check to make sure it doesn't go too high or low
 //console.log to test
 
-// let bodyParts = document.getElementsByTagName('img')
-// console.log(bodyParts)
-let bodyPartsIndex = 2 //comment out array and change to a variable holding the number
+let bodyPartsIndex = 0
 
 function changeBodyParts() {
   if (bodyPartsIndex == 0) {
