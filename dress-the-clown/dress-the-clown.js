@@ -22,9 +22,9 @@ let clownHead = document.getElementById('head')
 let headIndex = 0 //count the head image number
 
 function changeClownHead() {
-  DragEve
   clownHead.src = './images/head0.png'
-  console.log(clownHead.src)
+  let headSrc = './images/head' + headIndex + 'png'
+  console.log(headSrc)
 }
 changeClownHead()
 //Toggle between different body parts
