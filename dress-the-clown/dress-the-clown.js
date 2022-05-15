@@ -49,10 +49,13 @@ function toggleImages(keyPressed) {
   }
 }
 //Toggle between different body parts
-//create anothe rindex to keep track of which body part you are selecting clothing for (array using get element)
+//create another index to keep track of which body part you are selecting clothing for (array using get element)
 //Write  function that allows you to use the up and down arrows to increase/decrease the clothingindex variable
 //add a check to make sure it doesn't go too high or low
 //console.log to test
+
+let bodyParts = document.getElementsByTagName('img')
+console.log(bodyParts)
 
 //Refactor and change all body parts
 //use our head function
