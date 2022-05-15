@@ -9,7 +9,7 @@
 
 //The Head
 //give the head img an id to reference and assign to a variable
-//create changeClownHeaad function to chnaage the src image of your file to head1
+//create changeClownHead function to chnage the src image of your file to head1
 //test
 //create a variable to store the current number of your head image (outside of function)
 //create a variable to contain your src string so you cana manipulate this with the image number variable
@@ -18,8 +18,12 @@
 //Bind the function to your right arrow key to cycle through images
 //add a check to the function so that if the headIndex variable equals greater than 6 to staart back at 0
 
-clownHead = document.getElementById('head')
-console.log(clownHead)
+let clownHead = document.getElementById('head')
+
+function changeClownHead() {
+  console.log(clownHead.src)
+}
+changeClownHead()
 //Toggle between different body parts
 //create anothe rindex to keep track of which body part you are selecting clothing for (array using get element)
 //Write  function that allows you to use the up and down arrows to increase/decrease the clothingindex variable
