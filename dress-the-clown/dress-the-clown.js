@@ -21,6 +21,7 @@
 let clownHead = document.getElementById('head')
 
 function changeClownHead() {
+  clownHead.src = './images/head0.png'
   console.log(clownHead.src)
 }
 changeClownHead()
