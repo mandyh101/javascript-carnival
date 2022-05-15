@@ -23,9 +23,15 @@ let headIndex = 0 //count the head image number
 let headSrcStr = './images/head'
 
 function changeClownHead() {
+  if (headIndex <= 6) {
+    headIndex++
+  } else {
+    headIndex == 0
+  }
   let headSrc = headSrcStr.concat(headIndex + '.png')
   clownHead.src = headSrc
   console.log(clownHead.src)
+  console.log(headIndex)
 }
 changeClownHead()
 //Toggle between different body parts
