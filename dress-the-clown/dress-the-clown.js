@@ -22,20 +22,24 @@ let clownHead = document.getElementById('head')
 let headIndex = 0 //count the head image number
 let headSrcStr = './images/head'
 
-function changeClownHead() {
+function changeClownHeadUp() {
   headIndex < 5 ? headIndex++ : (headIndex = 0)
   let headSrc = headSrcStr.concat(headIndex + '.png')
   clownHead.src = headSrc
-  console.log(clownHead.src)
-  console.log(headIndex)
 }
 //changeClownHead()
+
+function changeClownHeadDown() {
+  headIndex > 5 ? headIndex-- : (headIndex = 0)
+  let headSrc = headSrcStr.concat(headIndex + '.png')
+  clownHead.src = headSrc
+}
 
 window.addEventListener('keydown', toggleImages, false)
 
 function toggleImages(keyPressed) {
   if (keyPressed.keyCode == 39) {
-    changeClownHead()
+    changeClownHeadUp()
     console.log('the arrow press calls the changeClownHead function')
   }
 }
