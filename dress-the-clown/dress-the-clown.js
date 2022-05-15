@@ -54,6 +54,10 @@ function toggleImages(keyPressed) {
     changeBodyParts(1)
     console.log('up arrow = change bodyPartIndex up')
     console.log(bodyPartsIndex)
+  } else if (keyPressed.keyCode == 40) {
+    changeBodyParts(-1)
+    console.log('down arrow = change bodyPartIndex down')
+    console.log(bodyPartsIndex)
   }
 }
 //Toggle between different body parts
@@ -61,7 +65,6 @@ function toggleImages(keyPressed) {
 //Write  function that allows you to use the up and down arrows to increase/decrease the clothingindex variable
 //add a check to make sure it doesn't go too high or low
 //console.log to test
-
 let bodyPartsIndex = 0
 
 function changeBodyParts(change) {
