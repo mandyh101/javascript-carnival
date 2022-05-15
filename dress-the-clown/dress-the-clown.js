@@ -39,6 +39,22 @@ function changeClownHeadDown() {
   clownHead.src = headSrc
 }
 
+let bodyPartsIndex = 0
+
+function changeBodyParts() {
+  if (bodyPartsIndex == 0) {
+    bodyPart = document.getElementById('head')
+    newbodyPartsIndex = bodyPartsIndex++
+    console.log('You are changing the ' + bodyPart)
+  } else if (bodyPartsIndex == 1) {
+    bodyPart = document.getElementById('body')
+    console.log('You are changing the ' + bodyPart)
+  } else if (bodyPartsIndex == 2) {
+    bodyPart = document.getElementById('feet')
+    console.log(bodyPart)
+  }
+}
+
 window.addEventListener('keydown', toggleImages, false)
 
 function toggleImages(keyPressed) {
@@ -50,6 +66,10 @@ function toggleImages(keyPressed) {
     changeClownHeadDown()
     console.log('left arrow = decrease headIndex')
     console.log(headIndex)
+  } else if (keyPressed.keyCode == 38) {
+    changeBodyParts()
+    console.log('up arrow = change bodyPartIndex up')
+    console.log(headIndex)
   }
 }
 //Toggle between different body parts
@@ -57,22 +77,6 @@ function toggleImages(keyPressed) {
 //Write  function that allows you to use the up and down arrows to increase/decrease the clothingindex variable
 //add a check to make sure it doesn't go too high or low
 //console.log to test
-
-let bodyPartsIndex = 0
-
-function changeBodyParts() {
-  if (bodyPartsIndex == 0) {
-    bodyPart = document.getElementById('head')
-    console.log('You are changing the ' + bodyPart)
-  } else if (bodyPartsIndex == 1) {
-    bodyPart = document.getElementById('body')
-    console.log('You are changing the ' + bodyPart)
-  } else if (bodyPartsIndex == 2) {
-    bodyPart = document.getElementById('feet')
-    console.log(bodyPart)
-  }
-}
-changeBodyParts()
 
 //Refactor and change all body parts
 //use our head function
