@@ -5,5 +5,25 @@
 //BIND the function to arrow keys
 //Left and right = cycle between different clothes
 //up and down to change the bodypart
+//Get one bodypart working first, then work on the others, then refactor.
 
 //The Head
+//give the head img an id to reference and assign to aa variable
+//create changeClownHeaad function to chnaage the src image of your file to head1
+//test
+//create a variable to store the current number of your head image (outside of function)
+//create a variable to contain your src string so you cana manipulate this with the image number variable
+//use the string variable to update your image src and index one-by-one
+//test
+//Bind the function to your right arrow key to cycle through images
+//add a check to the function so that if the headIndex variable equals greater than 6 to staart back at 0
+
+//Toggle between different body parts
+//create anothe rindex to keep track of which body part you are selecting clothing for (array using get element)
+//Write  function that allows you to use the up and down arrows to increase/decrease the clothingindex variable
+//add a check to make sure it doesn't go too high or low
+//console.log to test
+
+//Refactor and change all body parts
+//use our head function
+//Our function should cycle through the images depending on what the clothingIndex variabel is set at e.g. if == 0, change head images. If == 1, change body images. If == 2, change shows.
