@@ -20,10 +20,12 @@
 
 let clownHead = document.getElementById('head')
 let headIndex = 0 //count the head image number
+let headSrcStr = './images/head'
 
 function changeClownHead() {
   clownHead.src = './images/head0.png'
-  let headSrc = './images/head' + headIndex + 'png'
+  //let headSrc = './images/head' + headIndex + 'png'
+  let headSrc = headSrcStr.concat(headIndex + '.png')
   console.log(headSrc)
 }
 changeClownHead()
