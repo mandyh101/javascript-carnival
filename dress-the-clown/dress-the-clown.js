@@ -29,16 +29,32 @@ let bodySrcStr = './images/body'
 let feetSrcStr = './images/shoes'
 
 function changeClownHeadUp() {
-  headIndex < 5 ? headIndex++ : (headIndex = 0)
-  let headSrc = headSrcStr.concat(headIndex + '.png')
-  clownHead.src = headSrc
+  if (bodyPartsIndex == 0) {
+    headIndex < 5 ? headIndex++ : (headIndex = 0)
+    let headSrc = headSrcStr.concat(headIndex + '.png')
+    clownHead.src = headSrc
+  }
 }
-//changeClownHead()
-
 function changeClownHeadDown() {
-  headIndex > 0 ? headIndex-- : (headIndex = 5)
-  let headSrc = headSrcStr.concat(headIndex + '.png')
-  clownHead.src = headSrc
+  if (bodyPartsIndex == 0) {
+    headIndex > 0 ? headIndex-- : (headIndex = 5)
+    let headSrc = headSrcStr.concat(headIndex + '.png')
+    clownHead.src = headSrc
+  }
+}
+function changeBodyUp() {
+  if (bodyPartsIndex == 1) {
+    bodyIndex < 5 ? bodyIndex++ : (bodyIndex = 0)
+    let bodySrc = bodySrcStr.concat(headIndex + '.png')
+    clownBody.src = bodySrc
+  }
+}
+function changeClownHeadDown() {
+  if (bodyPartsIndex == 1) {
+    bodyIndex > 0 ? bodyIndex-- : (bodyIndex = 5)
+    let bodySrc = bodySrcStr.concat(headIndex + '.png')
+    clownBody.src = bodySrc
+  }
 }
 
 window.addEventListener('keydown', toggleImages, false)
