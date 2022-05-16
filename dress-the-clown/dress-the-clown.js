@@ -52,6 +52,17 @@ function changeOutfit(change) {
     let bodySrc = bodySrcStr.concat(bodyIndex + '.png')
     clownBody.src = bodySrc
   }
+  if (bodyPartsIndex == 2) {
+    feetIndex += change
+    if (feetIndex < 0) {
+      feetIndex = 5
+    }
+    if (feetIndex > 5) {
+      feetIndex = 0
+    }
+    let feetSrc = feetSrcStr.concat(feetIndex + '.png')
+    clownFeet.src = feetSrc
+  }
 }
 
 window.addEventListener('keydown', toggleImages, false)
