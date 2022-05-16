@@ -29,16 +29,29 @@ let bodySrcStr = './images/body'
 let feetSrcStr = './images/shoes'
 
 function changeOutfit(change) {
-  //my functions were too body aprt specific. I watched the demo video and learned about using an event paramenter and += to incrementally increase the number variable. I then copied my code to update the source.
-  headIndex += change
-  if (headIndex < 0) {
-    headIndex = 5
+  //my functions were too body part specific. I watched the demo video and learned about using an event paramenter and += to incrementally increase the number variable. I then copied my code to update the source.
+  if (bodyPartsIndex == 0) {
+    headIndex += change
+    if (headIndex < 0) {
+      headIndex = 5
+    }
+    if (headIndex > 5) {
+      headIndex = 0
+    }
+    let headSrc = headSrcStr.concat(headIndex + '.png')
+    clownHead.src = headSrc
   }
-  if (headIndex > 5) {
-    headIndex = 0
+  if (bodyPartsIndex == 1) {
+    bodyIndex += change
+    if (bodyIndex < 0) {
+      bodyIndex = 5
+    }
+    if (bodyIndex > 5) {
+      bodyIndex = 0
+    }
+    let bodySrc = bodySrcStr.concat(bodyIndex + '.png')
+    clownBody.src = bodySrc
   }
-  let headSrc = headSrcStr.concat(headIndex + '.png')
-  clownHead.src = headSrc
 }
 
 window.addEventListener('keydown', toggleImages, false)
