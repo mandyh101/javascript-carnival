@@ -47,16 +47,16 @@ function toggleImages(keyPressed) {
   if (keyPressed.keyCode == 39) {
     changeOutfit(1)
     console.log('right arrow = increase image src index')
-    console.log(headIndex)
   } else if (keyPressed.keyCode == 37) {
     changeOutfit(-1)
     console.log('left arrow = decrease image src index')
-    console.log(headIndex)
   } else if (keyPressed.keyCode == 38) {
     console.log('up arrow = change bodyPartIndex up')
+    changeBodyParts(1)
     console.log(bodyPartsIndex)
   } else if (keyPressed.keyCode == 40) {
     console.log('down arrow = change bodyPartIndex down')
+    changeBodyParts(1)
     console.log(bodyPartsIndex)
   }
 }
