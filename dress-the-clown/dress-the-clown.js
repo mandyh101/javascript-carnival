@@ -28,52 +28,62 @@ let headSrcStr = './images/head'
 let bodySrcStr = './images/body'
 let feetSrcStr = './images/shoes'
 
-function changeClownHeadUp() {
-  if (bodyPartsIndex == 0) {
-    headIndex < 5 ? headIndex++ : (headIndex = 0)
-    let headSrc = headSrcStr.concat(headIndex + '.png')
-    clownHead.src = headSrc
+function changeOutfit(change) {
+  //my functions were too body aprt specific. I watched the demo video and learned about using an event paramenter and += to incrementally increase the number variable. I then copied my code to update the source.
+  headIndex += change
+  if (headIndex < 0) {
+    headIndex = 5
   }
-}
-function changeClownHeadDown() {
-  if (bodyPartsIndex == 0) {
-    headIndex > 0 ? headIndex-- : (headIndex = 5)
-    let headSrc = headSrcStr.concat(headIndex + '.png')
-    clownHead.src = headSrc
+  if (headIndex > 5) {
+    headIndex = 0
   }
+  let headSrc = headSrcStr.concat(headIndex + '.png')
+  clownHead.src = headSrc
 }
-function changeBodyUp() {
-  if (bodyPartsIndex == 1) {
-    bodyIndex < 5 ? bodyIndex++ : (bodyIndex = 0)
-    let bodySrc = bodySrcStr.concat(headIndex + '.png')
-    clownBody.src = bodySrc
-  }
-}
-function changeClownHeadDown() {
-  if (bodyPartsIndex == 1) {
-    bodyIndex > 0 ? bodyIndex-- : (bodyIndex = 5)
-    let bodySrc = bodySrcStr.concat(headIndex + '.png')
-    clownBody.src = bodySrc
-  }
-}
+// function changeClownHeadUp() {
+//   if (bodyPartsIndex == 0) {
+//     headIndex < 5 ? headIndex++ : (headIndex = 0)
+//     let headSrc = headSrcStr.concat(headIndex + '.png')
+//     clownHead.src = headSrc
+//   }
+// }
+// function changeClownHeadDown() {
+//   if (bodyPartsIndex == 0) {
+//     headIndex > 0 ? headIndex-- : (headIndex = 5)
+//     let headSrc = headSrcStr.concat(headIndex + '.png')
+//     clownHead.src = headSrc
+//   }
+// }
+// function changeBodyUp() {
+//   if (bodyPartsIndex == 1) {
+//     bodyIndex < 5 ? bodyIndex++ : (bodyIndex = 0)
+//     let bodySrc = bodySrcStr.concat(headIndex + '.png')
+//     clownBody.src = bodySrc
+//   }
+// }
+// function changeClownHeadDown() {
+//   if (bodyPartsIndex == 1) {
+//     bodyIndex > 0 ? bodyIndex-- : (bodyIndex = 5)
+//     let bodySrc = bodySrcStr.concat(headIndex + '.png')
+//     clownBody.src = bodySrc
+//   }
+// }
 
 window.addEventListener('keydown', toggleImages, false)
 
 function toggleImages(keyPressed) {
   if (keyPressed.keyCode == 39) {
-    changeClownHeadUp()
-    console.log('right arrow = increase headIndex')
+    changeOutfit(1)
+    console.log('right arrow = increase image src index')
     console.log(headIndex)
   } else if (keyPressed.keyCode == 37) {
-    changeClownHeadDown()
-    console.log('left arrow = decrease headIndex')
+    changeOutfit(-1)
+    console.log('left arrow = decrease image src index')
     console.log(headIndex)
   } else if (keyPressed.keyCode == 38) {
-    changeBodyParts(1)
     console.log('up arrow = change bodyPartIndex up')
     console.log(bodyPartsIndex)
   } else if (keyPressed.keyCode == 40) {
-    changeBodyParts(-1)
     console.log('down arrow = change bodyPartIndex down')
     console.log(bodyPartsIndex)
   }
