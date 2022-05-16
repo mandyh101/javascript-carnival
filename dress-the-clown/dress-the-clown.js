@@ -21,7 +21,9 @@
 let clownHead = document.getElementById('head')
 let clownBody = document.getElementById('body')
 let clownFeet = document.getElementById('feet')
-let headIndex = 0 //count the head image number
+let headIndex = 0
+let bodyIndex = 0
+let feetIndex = 0
 let headSrcStr = './images/head'
 let bodySrcStr = './images/body'
 let feetSrcStr = './images/shoes'
