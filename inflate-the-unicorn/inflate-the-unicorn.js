@@ -28,14 +28,17 @@ function inflateTheUnicorn(e) {
   //And then I can use this variable in my condition to iterate on each click and change the src link for the image.
   const srcNumber = unicorn.src.slice(-5, -4) //I paired with David to work through slicing the src link.
 
-  if (srcNumber === '0') {
-    unicorn.src = './images/unicorn-1.png' // I had a bug because I was trying to make my code block increase the srcNum. Pairing with David we worked out that I could just write the image link here.
-  } else if (srcNumber === '1') {
-    unicorn.src = './images/unicorn-2.png'
-  } else if (srcNumber === '2') {
-    unicorn.src = './images/unicorn-3.png'
-  } else {
-    alert(`Unicorn number ${id} says thank you!`)
+  switch (srcNumber) {
+    case '0':
+      unicorn.src = './images/unicorn-1.png'
+      break
+    case '1':
+      unicorn.src = './images/unicorn-2.png'
+      break
+    case '2':
+      unicorn.src = './images/unicorn-3.png'
+      break
+    default:
+      alert(`Unicorn number ${id} says thank you!`)
   }
 }
-//stretch - change the above if/else condition to switch
